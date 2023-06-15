@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		
+		<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+		<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+	</head>
+
+	<body style='margin : 0px; overflow: hidden;'>
+		
+		<a-scene
+		arjs="sourceType: webcam; debugUIEnabled: false;"
+		embedded
+		renderer="logarithmicDepthBuffer: true;"
+		vr-mode-ui="enabled: false"
+		id="scene">
+		<a-assets>
+			<a-asset-item id="ShineSprite" src="https://raw.githubusercontent.com/Snow-Lotus-1/MarkerAR/main/assets/Shine_Sprite.gltf"></a-asset-item>
+		</a-assets>
+		    <a-marker type="pattern" url="https://raw.githubusercontent.com/Snow-Lotus-1/MarkerAR/main/assets/maple_leaf.patt">
+
+			    <a-entity id="entity-sprite" positon="0.5 0.5 0" rotation="0 0 0" scale="0.005 0.005 0.005" gltf-model="#ShineSprite"></a-entity>
+		    </a-marker>
+
+			<a-entity camera></a-entity>
+
+		</a-scene>
+
+	</body>
+</htlm>
